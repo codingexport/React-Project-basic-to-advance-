@@ -5,16 +5,15 @@ Whether you're a beginner looking to learn the fundamentals or an intermediate d
 ## Explore React Project 
 ## Table of contents
 
-- [Overview](#overview)
-  -[Features](#Features)
+- [Overview](#overview) 
+  - [Features](#Features)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [Installation and Setup](#Installation-and-Setup)
   - [Project Structure](#Project-Structure)
   - [Usage](#Usage)
 - [Technologies Used](#Technologies-Used)
- - [Contribution](#Contribution)
- - [Author](#Author)
+  - [Contribution](#Contribution)
+  - [Author](#Author)
 
 ---
 
