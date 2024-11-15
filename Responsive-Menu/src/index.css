@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+ background-color: black;
+  background-blend-mode: multiply,multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.App {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.menu {
+  width: 30%;
+  text-align: left;
+  padding: 20px;
+  height: 100vh;
+  left: -100%;
+  position: fixed;
+  background-color: #2ecc71;
+  transition: all 1s ease-out ;
+}
+.active{
+  left: 0%;
+  transition: all 1s ease-in ;
+
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.menu ul li:hover {
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  transform: translateX(10px);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu ul li:active {
+  transform: translateX(5px);
+}
+button {
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 10px; /* Large enough for visibility */
+  background-color: #34db3f; /* Cool blue background */
+  color: #fff; /* White icon color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px 15px; /* Spacing around the icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth animation */
+}
+
+button:hover {
+  background-color: #29b954; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+button:active {
+  transform: scale(0.95); /* Shrink slightly on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+}
+span{
+  font-size: 15;
+  font-weight: bold;
+}
