@@ -13,13 +13,13 @@ Whether you're a beginner looking to learn the fundamentals or an intermediate d
 - Demonstrates how `useState` manages the popup's visibility.
 
 ### ScreentShot
+![](https://github.com/codingexport/React-Project-basic-to-advance-/blob/main/EnQuiryPopup.gif)
 
 ### 2. **HideShowPassword**
 - Allows toggling the visibility of password input fields.
 - Implements dynamic state handling using `useState`.
 ![](https://github.com/codingexport/React-Project-basic-to-advance-/blob/main/hideShowPassword.gif)
-### ScreentShot
-![](https://github.com/codingexport/React-Project-basic-to-advance-/blob/main/EnQuiryPopup.gif)
+
 ### 3. **ResponsiveMenu**
 - A responsive navigation menu optimized for various screen sizes.
 - Uses `useState` to toggle menu expansion and collapse.
