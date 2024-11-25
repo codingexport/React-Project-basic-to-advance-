@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(assets/173782.jpg);
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+/* Container for the To-Do App */
+.app {
+  margin: auto;
+  width: 90%;
+  max-width: 1140px;
+  background-color: #f1f1f1;
+  margin-top:10px;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px 4px  #dfe607ba;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* To-Do List Styling */
+.outerDiv ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.outerDiv li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.outerDiv li:hover {
+  background-color: #f1f1f1;
+}
+
+.outerDiv li span {
+  color: #dc3545;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.outerDiv li span:hover {
+  transform: scale(1.2);
+}
+.completetodo {
+  text-decoration: line-through;
+  color: red;
+  background-color: rgb(243, 243, 48) !important;
+  cursor: pointer;
+  transition: all 0.5s ease; 
+  animation: completeTask 0.7s ease-in-out; 
+ 
+}
+
+
+.completetodo:hover {
+  background-color: #ffc107; 
+  color: #333; 
+  transform: scale(1.05); 
+}
+
+/* Keyframes for the completion animation */
+@keyframes completeTask {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotate(-5deg); 
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg); 
+  }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .app {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app {
+    width: 50%;
+  }
+}
