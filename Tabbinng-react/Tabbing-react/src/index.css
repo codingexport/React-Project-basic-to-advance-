@@ -1,0 +1,84 @@
+/* General Styles */
+body{
+  background-color:  #333;
+
+}
+.Tabouter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: transparent;
+  color: #333;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(206, 206, 213, 0.329);
+}
+
+.Tabouter h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-align: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Tab List Styles */
+.Tabouter ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.Tabouter ul li {
+  margin: 0;
+}
+
+/* Tab Button Styles */
+.Tabouter ul li button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-right: 1px solid #ddd;
+}
+
+.Tabouter ul li button:last-child {
+  border-right: none;
+}
+
+.Tabouter ul li button:hover {
+  background-color: #e0e7ff;
+  color: #007bff;
+}
+
+.Tabouter ul li button.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #0056b3;
+}
+
+/* Tab Content Styles */
+.tab-content {
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 15px;
+  color: #ddd;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+  border-radius: 15px;
+  box-shadow: 0 2px 18px rgba(200, 193, 193, 0.1);
+}
