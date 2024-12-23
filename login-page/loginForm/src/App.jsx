@@ -1,19 +1,44 @@
 import React, { useState } from "react";
 
 const RegistrationForm = () => {
-  let [fordata, setdata] = useState(
-    {
-      uname: '',
-      uemail: '',
-      upassword: '',
-      index: ""
-    }
-  )
+  const [fordata, setdata] = useState({
+    uname: "",
+    uemail: "",
+    upassword: "",
+  });
+  const [userData, setUserData] = useState([]);
+
+  const getValue = (event) => {
+    const { name, value } = event.target;
+    setdata((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent page reload
+
+    const currentUserFordata = {
+      uname: fordata.uname,
+      uemail: fordata.uemail,
+      upassword: fordata.upassword,
+    };
+
+    setUserData((prevUserData) => [...prevUserData, currentUserFordata]);
+
+    // Clear the input fields
+    setdata({
+      uname: "",
+      uemail: "",
+      upassword: "",
+    });
+  };
 
   return (
     <div className="container">
       <h2>Registration Form</h2>
-      <form >
+      <form onSubmit={handleSubmit}>
         {/* Name Input */}
         <div>
           <label htmlFor="name">Name:</label>
@@ -22,7 +47,7 @@ const RegistrationForm = () => {
             id="name"
             value={fordata.uname}
             name="uname"
-            onChange={(e) => setName(e.target.value)}
+            onChange={getValue}
             placeholder="Enter your name"
             required
           />
@@ -36,7 +61,7 @@ const RegistrationForm = () => {
             id="email"
             name="uemail"
             value={fordata.uemail}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={getValue}
             placeholder="Enter your email"
             required
           />
@@ -50,21 +75,27 @@ const RegistrationForm = () => {
             id="password"
             value={fordata.upassword}
             name="upassword"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={getValue}
             placeholder="Enter your password"
             required
           />
         </div>
 
         {/* Submit Button */}
-        <button type="submit">
-          {
-
-            fordata.index !== "" ? 'Registered' : '  Register'
-          }
-
-        </button>
+        <button type="submit">Register</button>
       </form>
+
+      {/* Displaying Registered Users */}
+      <div>
+        <h3>Registered Users:</h3>
+        <ul>
+          {userData.map((user, index) => (
+            <li key={index}>
+              {user.uname} ({user.uemail})
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
